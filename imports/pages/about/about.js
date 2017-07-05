@@ -8,20 +8,20 @@ class About {}
 
 const name = 'about';
 
-export default angular.module('about', [angularMeteor, uiRouter])
-.component('about', {
-  templateUrl: template,
-  controllerAs: 'about',
+export default angular.module(name, [angularMeteor, uiRouter])
+.component(name, {
+  template,
+  controllerAs: name,
   controller: About
 })
-.factory('AboutService', AboutService);
+.config(config);
 
-AboutService.$inject = ['$stateProvider'];
-
-function AboutService($stateProvider) {
+function config($stateProvider) {
   $stateProvider
   .state('about', {
     url: '/about',
     template: '<about></about>'
   });
 }
+
+config.$inject = ["$stateProvider"];
