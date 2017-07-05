@@ -14,14 +14,10 @@ export default angular.module(name, [angularMeteor, uiRouter])
   controllerAs: name,
   controller: About
 })
-.config(config);
-
-function config($stateProvider) {
+.config(['$stateProvider', function($stateProvider){
   $stateProvider
   .state('about', {
     url: '/about',
     template: '<about></about>'
   });
-}
-
-config.$inject = ["$stateProvider"];
+}]);
