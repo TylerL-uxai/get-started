@@ -8,10 +8,10 @@ class About {}
 
 const name = 'about';
 
-export default angular.module(name, [angularMeteor, uiRouter])
-.component(name, {
+export default angular.module('about', [angularMeteor, uiRouter])
+.component('about', {
   templateUrl: template,
-  controllerAs: name,
+  controllerAs: 'about',
   controller: About
 })
 .config(config);

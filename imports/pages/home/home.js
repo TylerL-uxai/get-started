@@ -8,10 +8,10 @@ class HomeCtrl {}
 
 const name = 'home';
 
-export default angular.module(name, [angularMeteor, uiRouter])
-.component(name, {
+export default angular.module('home', [angularMeteor, uiRouter])
+.component('home', {
   templateUrl: template,
-  controllerAs: name,
+  controllerAs: 'home',
   controller: HomeCtrl
 })
 .config(config);

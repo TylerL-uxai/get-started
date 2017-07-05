@@ -10,9 +10,9 @@ class NavigationCtrl {
 
 const name = 'navigation';
 
-export default angular.module(name, [angularMeteor])
-.component(name, {
+export default angular.module('navigation', [angularMeteor])
+.component('navigation', {
   templateUrl: template,
-  controllerAs: name,
+  controllerAs: 'navigation',
   controller: NavigationCtrl
 });
