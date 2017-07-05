@@ -4,6 +4,8 @@ import template from './main.html';
 import uiRouter from 'angular-ui-router';
 
 import About from '../pages/about/about';
+import Home from '../pages/home/home';
+import Navigation from '../components/navigation/navigation';
 
 class MainCtrl {
   constructor() {
@@ -15,7 +17,9 @@ class MainCtrl {
 export default angular.module('main', [
   angularMeteor,
   uiRouter,
-  About.name
+  About.name,
+  Navigation.name,
+  Home.name
 ])
   .component('main', {
     templateUrl: 'imports/main/main.html',
