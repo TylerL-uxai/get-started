@@ -14,11 +14,11 @@ export default angular.module('about', [angularMeteor, uiRouter])
   controllerAs: 'about',
   controller: About
 })
-.config(config);
+.factory('AboutService', AboutService);
 
-function config($stateProvider) {
-  'ngInject';
+AboutService.$inject = ['$stateProvider'];
 
+function AboutService($stateProvider) {
   $stateProvider
   .state('about', {
     url: '/about',

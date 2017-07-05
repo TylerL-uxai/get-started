@@ -14,11 +14,11 @@ export default angular.module('home', [angularMeteor, uiRouter])
   controllerAs: 'home',
   controller: HomeCtrl
 })
-.config(config);
+.factory('HomeService', HomeService);
 
-function config($stateProvider) {
-  'ngInject';
+HomeService.$inject = ['$stateProvider'];
 
+function HomeService($stateProvider) {
   $stateProvider
   .state('home', {
     url: '/',

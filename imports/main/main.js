@@ -25,12 +25,12 @@ export default angular.module('main', [
     templateUrl: 'imports/main/main.html',
     controller: MainCtrl
   })
-  .config(config);
+  .factory('MainService', MainService);
 
-function config($locationProvider, $urlRouterProvider) {
-  'ngInject';
+  MainService.$inject = ['$locationProvider', '$urlRouterProvider'];
 
-  $locationProvider.html5Mode(true);
+  function MainService($locationProvider, $urlRouterProvider) {
+    $locationProvider.html5Mode(true);
 
-  $urlRouterProvider.otherwise('/');
-}
+    $urlRouterProvider.otherwise('/');
+  }
