@@ -10,7 +10,7 @@ const name = 'about';
 
 export default angular.module(name, [angularMeteor, uiRouter])
 .component(name, {
-  templateUrl: 'imports/pages/about/about.html',
+  templateUrl: template,
   controllerAs: name,
   controller: About
 })
