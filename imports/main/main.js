@@ -1,6 +1,9 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import template from './main.html';
+import uiRouter from 'angular-ui-router';
+
+import About from '../pages/about/about';
 
 class MainCtrl {
   constructor() {
@@ -10,9 +13,20 @@ class MainCtrl {
 }
 
 export default angular.module('main', [
-  angularMeteor
+  angularMeteor,
+  uiRouter,
+  About.name
 ])
   .component('main', {
     templateUrl: 'imports/main/main.html',
     controller: MainCtrl
-  });
+  })
+  .config(config);
+
+function config($locationProvider, $urlRouterProvider) {
+  'ngInject';
+
+  $locationProvider.html5Mode(true);
+
+  $urlRouterProvider.otherwise('/');
+}
