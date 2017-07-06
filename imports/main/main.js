@@ -5,6 +5,8 @@ import uiRouter from 'angular-ui-router';
 
 import About from '../pages/about/about';
 import Home from '../pages/home/home';
+import Examples from '../pages/examples/examples';
+import Services from '../pages/services/services';
 import Navigation from '../components/navigation/navigation';
 
 class MainCtrl {
@@ -19,7 +21,9 @@ export default angular.module('main', [
   uiRouter,
   About.name,
   Navigation.name,
-  Home.name
+  Home.name,
+  Examples.name,
+  Services.name
 ])
   .component('main', {
     templateUrl: 'imports/main/main.html',
