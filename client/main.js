@@ -4,7 +4,7 @@ import angularMeteor from 'angular-meteor';
 import Main from '../imports/main/main';
 import uiRouter from 'angular-ui-router';
 
-angular.module('simple-todos', [
+angular.module('portfolio', [
   angularMeteor,
   Main.name,
   uiRouter
